@@ -1,0 +1,17 @@
+---
+image: quay.io/ansible/molecule:latest
+
+services:
+  - docker:dind
+
+variables:
+  DOCKER_HOST: "tcp://docker:2375"
+  PY_COLORS: 1
+
+stages:
+  - build
+
+molecule-default-scenario:
+  stage: build
+  script:
+    - molecule test

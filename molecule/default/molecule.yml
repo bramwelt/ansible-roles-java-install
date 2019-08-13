@@ -14,6 +14,8 @@ provisioner:
   name: ansible
   lint:
     name: ansible-lint
+  env:
+    ANSIBLE_STDOUT_CALLBACK: unixy
 scenario:
   name: default
 verifier:
